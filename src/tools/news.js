@@ -23,34 +23,7 @@ const news = (country,callback) =>{
     else{
        callback(undefined,[
           
-          {
-          title:response.body.articles[0].title ,
-           img:response.body.articles[0].urlToImage,
-          description: response.body.articles[0].description},
-          {
-            title:response.body.articles[1].title ,
-            img:response.body.articles[1].urlToImage,
-           description: response.body.articles[1].description
-
-          },
-          {
-            title:response.body.articles[2].title ,
-            img:response.body.articles[2].urlToImage,
-           description: response.body.articles[2].description
-
-          },
-          {
-            title:response.body.articles[3].title ,
-            img:response.body.articles[3].urlToImage,
-           description: response.body.articles[3].description
-
-          },
-          {
-            title:response.body.articles[4].title ,
-            img:response.body.articles[4].urlToImage,
-           description: response.body.articles[4].description
-
-          }
+         {data:response.body.articles}
          
          
          ])

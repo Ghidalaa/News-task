@@ -14,6 +14,7 @@ let newsFunction= async()=>{
         const res= await fetch('http://localhost:3000/news?country='+country)
         const data = await res.json()
         console.log(data) 
+        console.log(data[0])
         if(data.error){
             document.getElementById('error').innerText=data.error
             document.getElementById('title').innerText=""
@@ -22,7 +23,7 @@ let newsFunction= async()=>{
 
         }
         else {
-            document.getElementById('title').innerText=data
+            document.getElementById('title').innerText=data[0].title
             document.getElementById('img').innerText=data[0].img
             document.getElementById('description').innerText=data[0].description
             document.getElementById('error').innerText=""
